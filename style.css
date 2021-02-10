@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+body {
+	font-family: "Kufam", cursive;
+	background-color: #DADED4;
+}
+footer {
+	background-color: #39603D;
+	color: #fff;
+	position: static;
+	clear: both;
+	padding: 40px 100px;
+	margin: 0 0 0 0;
+	line-height: 25px;
+}
+.social {
+	padding: 10px;
+}
+span.ng-binding {
+	font-size: 9px;
+
+}
+.navbar {
+	margin-bottom: 0;
+	border-radius: 0;
+	border: none;
+	background-color: #fff;
+	color: #000;
+	padding: 1em;
+}
+.navbar-toggle {
+	background-color: #DADED4;
+}
+.foto {
+	margin-right: auto;
+	margin-left: auto;
+	width: 90%;
+}
+p {
+	padding: 1em;
+}
+.jumbotron {
+	background-color: #fff;
+	font-family: "Anton", sans-serif;
+	padding-left: 1em;
+}
+input, button, select, option{
+	border-radius: 10px;
+	padding: 5px;
+}
+.submit {
+	background-color: #B2DDB4;
+	border: 1px solid #B2DDB4;
+	box-shadow: 0 5px #999;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+.submit:disabled {
+	background-color: #d6d6d6;
+	border: 1px solid #d6d6d6;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+.quantita {
+	border-radius: 5px;
+	line-height: 0px;
+	font-size: 15px;
+	padding: 0.2px;
+}
+textarea {
+	border-radius: 10px;
+	border-color: black;
+	border-width: 2px;
+	max-width: 90%;
+	resize: none;
+}
+ul {
+	list-style-type: none;
+}
+li {
+	line-height: 50px;
+	font-size: 18px;
+	color: #000;
+}
+.titolo {
+	font-family: "Anton", sans-serif;
+	padding: 1.5em;
+	background-color: #fff;
+}
+.eshop-banner {
+	font-family: "Anton", sans-serif;
+	padding: 2em;
+	background-color: #B2DDB4;
+}
+.titolo-b {
+	padding-bottom: 0px;
+}
+#contatti {
+	padding: 3em;
+}
+form {
+	line-height: 25px;
+}
+.testo {
+	background-color: #DADED4;
+	padding: 1em;
+}
+.lista {
+	padding: 2em;
+}
+#eshop {
+	font-size: 20px;
+	text-decoration: underline;
+	color: #000;
+	padding: 2em;
+}
+a.brand.navbar-brand {
+    color: #000;
+    font-weight: bold; 
+	font-family: "Anton", sans-serif;
+	font-size: 30px;
+}
+a.brand.navbar-brand:hover {
+	color: #6A936D;
+}
+a {
+	color: #000;
+}
+.nav.navbar-nav>li>a, .nav.navbar-inverse>li>a {
+	color: #000;
+	font-weight: bold;
+}
+
+.nav.navbar-nav>li>a:hover, .nav.navbar-inverse>li>a:hover {
+	color: #6A936D;
+}
+.buttons {
+	padding: 10px 30px;
+	border: 3px solid #DADED4;
+	border-top-right-radius: 30px;
+	border-top-left-radius: 30px;
+	border-bottom-right-radius: 0px;
+	border-bottom-left-radius: 0px;
+	font-size: 20px;
+	background-color: #DADED4;
+	margin-top: 20px;
+}
+.buttons:hover {
+	background-color: #DADED4;
+	border: 3px solid #B3BFB5;
+	border-bottom: 3px solid #DADED4;
+}

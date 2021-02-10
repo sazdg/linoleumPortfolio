@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <title>Sara DG Portfolio</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Portfolio" />
+        <meta name="author" content="Sara De Grandis" />
+        <title>Sara DG Portfolio - Insight</title>
+        <link rel="icon" type="image/x-icon" href="foto/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+   <!--Google Font-->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Kufam&display=swap" rel="stylesheet">
+  <!--Boostrap CSS CDN--> 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <!--JQUERY CDN-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!--Bootstrap Javascript CDN-->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <!--CSS-->
+  <link rel="stylesheet" type="text/css" href="style.css">
+ 
+
+</head>
+<body ng-app="myApp" ng-controller="ctrl">
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="brand navbar-brand" href="homepage.html">Sara DG</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="homepage.html">Home</a></li>
+        <li><a href="eshop2.html">E-SHOP</a></li>
+        <li><a href="contatti3.html">Contatti</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="titolo titolo-b">
+  <div class="container">
+    <h1>LINOLEOGRAFIA</h1>  
+    <div class="col-md-12">
+    <button type="button" value="Tecnica" class="buttons col-sx-2" ng-click="funcTecnica()">Tecnica</button>
+    <button type="button" value="Eshop" class="buttons col-sx-2" ng-click="funcShop()">E-SHOP</button>
+  </div>    
+  </div>
+</div>
+
+
+<div class="container-fluid text-left" ng-show="tecnica"><br><br>
+  <div class="row">
+    <div class="col-md-4">
+    </div>
+    <div class="col-md-4 testo">
+      <p>La linoleografia è una tecnica di stampa artistica diretta, di immagini e grafiche su carta, cartone o stoffa mediante l'uso di una matrice ricavata per incisione da una porzione di linoleum adatto. Il termine "linoleografia" deriva dal nome del supporto. Il linoleum, in origine, era semplicemente un materiale da pavimentazione e solo a partire dall'inizio del 1900 venne usato come materiale artistico.</p>
+      <p>La matrice può essere utilizzata per stampare diverse copie fino alla sua usura; la linoleografia è considerata una tecnica di stampa ad alta tiratura relativamente recente, soprattutto se paragonata a tecniche quali la serigrafia che vanta secoli di applicazione. </p>
+    </div>
+  </div><br><br>
+
+<div class="container-fluid text-right">
+  <div class="row">
+    <div class="col-md-4">
+      <img src="foto/carvingpic.jpg" alt="carving" class="img-responsive foto">
+      <p class="text-center">CARVING</p>
+    </div>
+        <div class="col-md-4">
+      <img src="foto/inkpic.jpg" alt="inking" class="img-responsive foto">
+      <p class="text-center">INKING</p>
+    </div>
+        <div class="col-md-4">
+      <img src="foto/printpic.jpg" alt="printing" class="img-responsive foto">
+      <p class="text-center">PRINTING</p>
+    </div>
+</div><br>
+</div>
+
+</div>
+
+<div class="container-fluid" ng-hide="eshop">
+  <div class="container-fluid text-center">
+    <div class="row">
+
+  <div class="col-md-12 lista text-center">
+      <div class="img-responsive ">
+        <img src="foto/pattern.JPG" alt="" width="150">
+        <img src="foto/hopper.jpg" alt="" width="150">
+        <img src="foto/winter.JPG" alt="" width="150">
+        <img src="foto/snake.jpg" alt="" width="150">
+      </div>
+  </div>
+</div>
+
+<div class="container-fluid row">
+  <div class="col-md-4">
+  </div>
+  <div class="col-md-3 lista text-center">
+    <form method="post" name="myform">
+      <ul ng-switch="valuta">
+
+        <div ng-switch-default>
+          <li ng-repeat="x in stampa">
+           <input type="checkbox" ng-model="check" name="check">
+            <label>{{ x.nome }}, {{ x.prezzoEUR | currency : "€" }} </label>
+            <p ng-show="check" class="quantita">Aggiungi quantità: <input type="number" class="quantita" name="quantita" min="1" max="10" ng-model="quantita"></p>
+          </li><br>
+        </div>
+
+      <div ng-switch-when="USD">
+        <li ng-repeat="x in stampa">
+          <input type="checkbox" ng-model="check" name="check">
+          <label>{{ x.nome }}, {{ x.prezzoUSD | currency : "$" }}  </label>
+          <p ng-show="check" class="quantita">Aggiungi quantità: <input type="number" class="quantita" name="quantita" min="1" max="10" ng-model="quantita"></p>
+        </li><br>
+      </div>
+
+      <div ng-switch-when="GBP">
+        <li ng-repeat="x in stampa" >
+          <input type="checkbox" ng-model="check" name="check">
+          <label>{{ x.nome }}, {{ x.prezzoGBP | currency : "£" }}  </label>
+          <p ng-show="check" class="quantita">Aggiungi quantità: <input type="number" class="quantita" name="quantita" min="1" max="10" ng-model="quantita"></p>
+        </li>
+      </div>
+
+    </ul>
+
+    <div>
+      <lablel>Cambia valuta:</lablel>
+      <select ng-model=valuta>
+        <option value="EUR">EUR</option>
+        <option value="USD">USD</option>
+        <option value="GBP">GBP</option>
+      </select><br><br>
+
+      <input class="submit" type="submit" value="Vai all'ordine" ng-model="button"><br><br>
+    </div>
+
+  </form>
+</div>
+</div>
+</div>
+</div>
+
+
+
+<footer class="text-center">
+    <a href="https://www.instagram.com
+"><img class="social" src="foto/instagram-4-xl.png" alt="instagram" height="50"></a>
+    <a href="https://it-it.facebook.com
+"><img class="social" src="foto/facebook-4-xl.png" alt="facebook" height=50></a>
+    <a href="https://it.linkedin.com
+"><img class="social" src="foto/linkedin-4-xxl.png" alt="linkedin" height="50"></a>
+<br><br>
+<span>ADDRESS: Torino, Italia<br></span>
+  <span>© 2021 Sara De Grandis</span>
+</footer>
+
+
+ <!--Angular-->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <script src="myapp.js"></script>
+</body>
+</html>

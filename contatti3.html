@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <title>Sara DG Portfolio</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Portfolio" />
+        <meta name="author" content="Sara De Grandis" />
+        <title>Sara DG Portfolio - Contatti</title>
+        <link rel="icon" type="image/x-icon" href="foto/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+
+   <!--Google Font-->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Kufam&display=swap" rel="stylesheet">
+
+  <!--Boostrap CSS CDN--> 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <!--JQUERY CDN-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!--Bootstrap Javascript CDN-->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <!--CSS-->
+  <link rel="stylesheet" type="text/css" href="style.css">
+ 
+</head>
+<body ng-app="myApp" ng-controller="ctrlForm">
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="brand navbar-brand" href="homepage.html">Sara DG</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="homepage.html">Home</a></li>
+        <li><a href="eshop2.html">e-shop</a></li>
+        <li><a href="contatti3.html">CONTATTI</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="titolo">
+  <div class="container text-left">
+    <h1>Contatti</h1>      
+  </div>
+</div><br>
+
+<div class="container-fluid text-left">
+  <div class="row">
+    <div class="col-md-4">
+    </div>
+    <div class="col-md-6 col-xs-12">
+      <span>Per contattarmi manda una mail con questo form<br>* campi obbligatori</span>
+      <form method="POST" id="contatti" name="form" id="contattami" ng-submit="send()" novalidate>
+        <label>Il tuo nome*</label><br>
+        <input type="text" name="nome" ng-model="nome" required>
+          <span style="color:red" ng-show="form.nome.$error.required">Il nome è obbligatorio</span><br>
+
+        <label>La tua email*</label><br>
+        <input type="email" name="email" ng-model="email" ng-pattern="/^[a-z0-9A-Z._-]+@[a-z0-9A-Z._-]+\.[a-z]{2,4}$/" required>
+        <span style="color:red" ng-show="form.email.$error.required">L'email è obbligatoria</span>
+        <span style="color:red" ng-show="form.email.$error.pattern && form.email.$dirty">L'email non è valida</span><br>
+
+        <label>Titolo*</label><br>
+        <input type="text" name="titolo" ng-model="titolo" required><br>
+
+        <label>Il tuo messaggio* </label><br>
+        <textarea name="commento" rows="6" cols="30" ng-model="commento" required></textarea>
+        <br>
+
+        <input class="submit" type="submit" ng-model="button" ng-disabled="form.nome.$invalid || form.nome.$pristine || form.email.$error.email || form.titolo.$invalid || form.commento.$invalid" disabled>
+        <span ng-show="success">  Dati validi</span>
+        <span ng-show="error">  Dati non validi</span>
+     </form>
+    </div>
+  </div>
+</div><br><br>
+
+
+
+<footer class="container-fluid text-center">
+    <a href="https://www.instagram.com
+"><img class="social" src="foto/instagram-4-xl.png" alt="instagram" height="50"></a>
+    <a href="https://it-it.facebook.com
+"><img class="social" src="foto/facebook-4-xl.png" alt="facebook" height=50></a>
+    <a href="https://it.linkedin.com
+"><img class="social" src="foto/linkedin-4-xxl.png" alt="linkedin" height="50"></a>
+<br><br>
+<span>ADDRESS: Torino, Italia<br></span>
+  <span>© 2021 Sara De Grandis</span>
+</footer>
+
+ 
+  <!--Angular-->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <script src="myapp.js"></script>
+</body>
+</html>
