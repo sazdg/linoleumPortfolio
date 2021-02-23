@@ -58,7 +58,8 @@
     </div>
     <div class="col-md-6 col-xs-12">
       <span>Per contattarmi manda una mail con questo form<br>* campi obbligatori</span>
-      <form method="POST" id="contatti" name="form" id="contattami" ng-submit="send()" novalidate>
+      <form action="https://formspree.io/f/mknpadkz" method="POST" id="contatti" name="form" id="contattami" ng-submit="send()" novalidate>
+
         <label>Il tuo nome*</label><br>
         <input type="text" name="nome" ng-model="nome" required>
           <span style="color:red" ng-show="form.nome.$error.required">Il nome è obbligatorio</span><br>
