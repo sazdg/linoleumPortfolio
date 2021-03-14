@@ -47,6 +47,7 @@ p {
 input, button, select, option{
 	border-radius: 10px;
 	padding: 5px;
+	outline: none;
 }
 .submit {
 	background-color: #B2DDB4;
