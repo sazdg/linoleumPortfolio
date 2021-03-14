@@ -151,3 +151,6 @@ a {
 	border: 3px solid #B3BFB5;
 	border-bottom: 3px solid #DADED4;
 }
+*:focus {
+	outline: none;
+}
