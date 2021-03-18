@@ -75,7 +75,7 @@ label {
 }
 textarea {
 	border-radius: 10px;
-	border-color: black;
+	border-color: #999;
 	border-width: 2px;
 	max-width: 90%;
 	resize: none;
