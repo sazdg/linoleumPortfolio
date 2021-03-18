@@ -18,7 +18,6 @@ footer {
 }
 span.ng-binding {
 	font-size: 9px;
-
 }
 .navbar {
 	margin-bottom: 0;
@@ -44,10 +43,15 @@ p {
 	font-family: "Anton", sans-serif;
 	padding-left: 1em;
 }
-input, button, select, option{
+input, button, select, option {
 	border-radius: 10px;
 	padding: 5px;
-	outline: none;
+}
+input {
+	border: 2px solid #999;
+}
+label {
+	margin-top: 5px;
 }
 .submit {
 	background-color: #B2DDB4;
@@ -62,15 +66,9 @@ input, button, select, option{
 	padding-left: 10px;
 	padding-right: 10px;
 }
-.quantita {
-	border-radius: 5px;
-	line-height: 0px;
-	font-size: 15px;
-	padding: 0.2px;
-}
 textarea {
 	border-radius: 10px;
-	border-color: black;
+	border-color: #999;
 	border-width: 2px;
 	max-width: 90%;
 	resize: none;
@@ -88,10 +86,13 @@ li {
 	padding: 1.5em;
 	background-color: #fff;
 }
-.eshop-banner {
+.contact-banner {
 	font-family: "Anton", sans-serif;
 	padding: 2em;
 	background-color: #B2DDB4;
+}
+#contact {
+	font-size: 22px;
 }
 .titolo-b {
 	padding-bottom: 0px;
@@ -107,12 +108,6 @@ form {
 	padding: 1em;
 }
 .lista {
-	padding: 2em;
-}
-#eshop {
-	font-size: 20px;
-	text-decoration: underline;
-	color: #000;
 	padding: 2em;
 }
 a.brand.navbar-brand {
@@ -131,8 +126,10 @@ a {
 	color: #000;
 	font-weight: bold;
 }
-
 .nav.navbar-nav>li>a:hover, .nav.navbar-inverse>li>a:hover {
+	color: #6A936D;
+}
+a:hover {
 	color: #6A936D;
 }
 .buttons {
@@ -151,6 +148,11 @@ a {
 	border: 3px solid #B3BFB5;
 	border-bottom: 3px solid #DADED4;
 }
-*:focus {
-	outline: none;
+
+@media only screen and (max-width: 600px) {
+	div#form {
+	padding-left: 10%;
+	padding-right: 10%;
+	text-align: center;
+}
 }
