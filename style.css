@@ -156,3 +156,10 @@ a {
 	border: 3px solid #B3BFB5;
 	border-bottom: 3px solid #DADED4;
 }
+@media only screen and (max-width: 600px) {
+	div#form {
+	padding-left: 10%;
+	padding-right: 10%;
+	text-align: center;
+}
+}
