@@ -29,8 +29,8 @@ app.controller('ctrl', function($scope){
 });
 
 app.controller('ctrlForm', function($scope){
-	$scope.nome = 'nome';
-	$scope.email = 'email';
+	$scope.nome = ' ';
+	$scope.email = ' ';
 	$scope.titolo = '';
 	$scope.commento = '';
 
