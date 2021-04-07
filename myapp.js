@@ -47,27 +47,32 @@ app.controller('ctrlForm', function($scope){
 
 app.controller('ctrlHome', function($scope, $location, $interval){
 	$scope.myUrl = $location.absUrl();
+	
+	$scope.hopper = "hopper.jpg";
+	$scope.pattern = "pattern.jpg";
+	$scope.winter = "winter.jpg";
+	$scope.snake = "snake.jpg";
 
 	$interval(function(){
-		$scope.pattern = $("#patternfoto").attr("src","foto/pattern1.jpg");
-		$scope.hopper = $("#hopperfoto").attr("src","foto/hopper1.PNG");
+		$scope.hopper = "hopper1.PNG";
+		$scope.pattern = "pattern1.jpg";
 	}, 3000);
 	$interval(function(){
-		$scope.pattern = $("#patternfoto").attr("src","foto/pattern.jpg");
-		$scope.hopper = $("#hopperfoto").attr("src","foto/hopper.jpg");
-	}, 3010);
+		$scope.hopper = "hopper.jpg";
+		$scope.pattern = "pattern.jpg";
+	}, 3005);
 
 	$scope.glitchOn = function(){
-		$("#winterfoto").attr("src","foto/winter1.JPG");
+		$scope.winter = "winter1.JPG";
 	};
 	$scope.glitchOff = function(){
-		$("#winterfoto").attr("src","foto/winter.jpg");
+		$scope.winter = "winter.jpg";
 	};
 	$scope.glitch2On = function(){
-		$("#snakefoto").attr("src","foto/snake1.PNG");
+		$scope.snake = "snake1.PNG";
 	};
 	$scope.glitch2Off = function(){
-		$("#snakefoto").attr("src","foto/snake.jpg");
+		$scope.snake = "snake.jpg";
 	};
 
 });
